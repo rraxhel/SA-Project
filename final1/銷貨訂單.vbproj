@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6079AC17-35E7-4B63-BC61-1B4163193509}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>銷貨訂單.My.MyApplication</StartupObject>
+    <RootNamespace>銷貨訂單</RootNamespace>
+    <AssemblyName>銷貨訂單</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>銷貨訂單.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>銷貨訂單.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.33.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\MySql.Data\v4.0_8.0.33.0__c5687fc88969c44d\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="connection.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="主選單.Designer.vb">
+      <DependentUpon>主選單.vb</DependentUpon>
+    </Compile>
+    <Compile Include="主選單.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="保鮮.Designer.vb">
+      <DependentUpon>保鮮.vb</DependentUpon>
+    </Compile>
+    <Compile Include="保鮮.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="存貨修改.Designer.vb">
+      <DependentUpon>存貨修改.vb</DependentUpon>
+    </Compile>
+    <Compile Include="存貨修改.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="新增商品.Designer.vb">
+      <DependentUpon>新增商品.vb</DependentUpon>
+    </Compile>
+    <Compile Include="新增商品.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="存貨查詢.Designer.vb">
+      <DependentUpon>存貨查詢.vb</DependentUpon>
+    </Compile>
+    <Compile Include="存貨查詢.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="訂單.Designer.vb">
+      <DependentUpon>訂單.vb</DependentUpon>
+    </Compile>
+    <Compile Include="訂單.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="訂單新增.Designer.vb">
+      <DependentUpon>訂單新增.vb</DependentUpon>
+    </Compile>
+    <Compile Include="訂單新增.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="訂單修改.Designer.vb">
+      <DependentUpon>訂單修改.vb</DependentUpon>
+    </Compile>
+    <Compile Include="訂單修改.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="訂貨.Designer.vb">
+      <DependentUpon>訂貨.vb</DependentUpon>
+    </Compile>
+    <Compile Include="訂貨.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="財務.Designer.vb">
+      <DependentUpon>財務.vb</DependentUpon>
+    </Compile>
+    <Compile Include="財務.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="進貨.Designer.vb">
+      <DependentUpon>進貨.vb</DependentUpon>
+    </Compile>
+    <Compile Include="進貨.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="進貨查詢.Designer.vb">
+      <DependentUpon>進貨查詢.vb</DependentUpon>
+    </Compile>
+    <Compile Include="進貨查詢.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="銷貨.Designer.vb">
+      <DependentUpon>銷貨.vb</DependentUpon>
+    </Compile>
+    <Compile Include="銷貨.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="主選單.resx">
+      <DependentUpon>主選單.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="保鮮.resx">
+      <DependentUpon>保鮮.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="存貨修改.resx">
+      <DependentUpon>存貨修改.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="新增商品.resx">
+      <DependentUpon>新增商品.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="存貨查詢.resx">
+      <DependentUpon>存貨查詢.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="訂單.resx">
+      <DependentUpon>訂單.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="訂單新增.resx">
+      <DependentUpon>訂單新增.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="訂單修改.resx">
+      <DependentUpon>訂單修改.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="訂貨.resx">
+      <DependentUpon>訂貨.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="財務.resx">
+      <DependentUpon>財務.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="進貨.resx">
+      <DependentUpon>進貨.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="進貨查詢.resx">
+      <DependentUpon>進貨查詢.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="銷貨.resx">
+      <DependentUpon>銷貨.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\新增1.png" />
+    <None Include="Resources\修改2.png" />
+    <None Include="Resources\資產 10.png" />
+    <None Include="Resources\資產 13.png" />
+    <None Include="Resources\資產 4.png" />
+    <None Include="Resources\資產 12.png" />
+    <None Include="Resources\查詢.png" />
+    <None Include="Resources\_保鮮-01.jpg" />
+    <None Include="Resources\_查詢進貨1-01.jpg" />
+    <None Include="Resources\sa 封面.jpg" />
+    <None Include="Resources\保鮮資產 10.png" />
+    <None Include="Resources\保鮮資產 14.png" />
+    <None Include="Resources\保鮮資產 15.png" />
+    <None Include="Resources\保鮮資產 18.png" />
+    <None Include="Resources\存貨2.png" />
+    <None Include="Resources\存貨3.png" />
+    <None Include="Resources\存貨4.png" />
+    <None Include="Resources\存貨but3.png" />
+    <None Include="Resources\存but.png" />
+    <None Include="Resources\存貨but4.png" />
+    <None Include="Resources\box.png" />
+    <None Include="Resources\box2.png" />
+    <None Include="Resources\財務.png" />
+    <None Include="Resources\庫存修改資產 24.png" />
+    <None Include="Resources\庫存修改but.png" />
+    <None Include="Resources\yellow.png" />
+    <None Include="Resources\存貨but2.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\訂單but.png" />
+    <None Include="Resources\新增商品-01.jpg" />
+    <None Include="Resources\訂單新增5.png" />
+    <None Include="Resources\upp2.png" />
+    <None Include="Resources\訂單But2.png" />
+    <None Include="Resources\產品but.png" />
+    <None Include="Resources\訂貨but2.png" />
+    <None Include="Resources\訂貨背景.png" />
+    <None Include="Resources\訂貨but.png" />
+    <None Include="Resources\亮.png" />
+    <None Include="Resources\新增進貨-01.jpg" />
+    <None Include="Resources\sa BACK-01.jpg" />
+    <None Include="Resources\暗.png" />
+    <None Include="Resources\銷貨11.jpg" />
+    <None Include="Resources\sSs.jpg" />
+    <None Include="Resources\Image1.jpg" />
+    <None Include="Resources\銷貨S.png" />
+    <None Include="Resources\銷貨S1.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
