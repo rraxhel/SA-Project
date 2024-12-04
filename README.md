@@ -26,3 +26,7 @@
 二、MySQL Azure 資料庫
 ---
     使用 phpMyAdmin 工具建置好的資料庫，匯出其 sql 檔案到 MySQL Azure資料庫，讓團隊可以在不同地方連接資料庫，達成至雲端資料庫的即時更新。
+
+系統介面
+===
+![image](picture or gif url)
