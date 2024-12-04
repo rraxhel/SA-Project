@@ -29,4 +29,4 @@
 
 系統介面
 ===
-![image](picture or gif url)
+![image](picture/主畫面視窗.png)
